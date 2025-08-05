@@ -1,154 +1,137 @@
-**Name**: Prathyush Nimmagadda
-**PRN**: 24070123064
-**Batch**: ENTC A3
+Name: Prathyush Nimmagadda
+PRN: 24070123064
+Batch: ENTC A3
 
-# C++ Programs: Decision Control and Loop Statements
+C++ Programs: Decision Control and Loop Statements
+Explore foundational examples in C++ covering conditions and loops. Each section explains the logic, relevant theory, and typical output for learning program flow and structured iteration.
 
-This document outlines basic C++ programs focusing on decision control and loop statements, essential in understanding program flow and iteration.
+1. Code: Display Numbers 1 to 20 with a While Loop
+Logic:
+Start with a variable i at 0. Utilize a while loop: as long as i is less than 20, print i+1 then increase i by 1. Continue until 20 numbers have been shown.
 
----
+Theory:
+A while loop checks its condition before executing the body, making it suited for scenarios where the iteration count isn't set from the start.
 
-## 1. Code Name: Print Numbers from 1 to 20 Using While Loop
+Concepts:
 
-**Logic**:
-A variable `i` is initialized to 0. The `while` loop checks if `i` is less than 20. If the condition is true, it prints `i + 1` and increments `i` by 1. This continues until `i` reaches 20.
+Loop basics
 
-**Theory**:
-The `while` loop is an entry-controlled loop that evaluates the condition before executing the loop body. It is best used when the number of iterations is not fixed or known in advance.
+Entry-controlled repetition
 
-**Concepts Covered**:
+Simple counter
 
-* Looping constructs
-* Entry-controlled loop
-* Counter-based iteration
+Sample Output:
 
-**Output**:
-
-```
+text
 1
 2
 3
 ...
 20
-```
+2. Code: Debugging Faulty Nested Loops
+Logic:
+This snippet aims to print a right-angled triangle using nested loops, but it fails to compile due to a misplaced endl and a missing closing brace.
 
----
+Theory:
+In C++, well-matched braces and correct syntax are essential; a single omission like a missing } triggers compilation errors.
 
-## 2. Code Name: Faulty Code
+Concepts:
 
-**Logic**:
-The code attempts to print a right-angled triangle using nested loops, but a misplaced `endl` and a missing closing brace result in a syntax error.
+Nested iteration
 
-**Theory**:
-Correct syntax and matching braces are critical in structured programming. A small mistake like a missing `}` can halt compilation.
+Syntax validation
 
-**Concepts Covered**:
+C++ troubleshooting
 
-* Nested loops
-* Syntax errors
-* Debugging in C++
+Expected Output:
 
-**Output**:
-
-```
+text
 Error: expected '}' at end of input
-```
+3. Code: Print "SIT" Multiple Times with a For Loop
+Logic:
+A for loop runs from 0 to 5, each time outputting "SIT". The loop ensures the message gets printed a fixed number of times (here, 6).
 
----
+Theory:
+The for loop structure enables predictable, fixed-number repetition, ideal for outputting repeated information.
 
-## 3. Code Name: Print "SIT" 5 Times Using For Loop
+Concepts:
 
-**Logic**:
-A `for` loop runs from 0 to 5 and prints the string "SIT" in each iteration. The loop executes exactly 6 times.
+For loop construction
 
-**Theory**:
-The `for` loop is ideal for fixed-count iterations. It consists of initialization, condition checking, and updating.
+Counting iterations
 
-**Concepts Covered**:
+Output repetition
 
-* For loop structure
-* Fixed iteration
-* Output repetition
+Sample Output:
 
-**Output**:
-
-```
+text
 SIT
 SIT
 SIT
 SIT
 SIT
 SIT
-```
+4. Code: Show Even Numbers 0 to 10 Using For Loop
+Logic:
+For numbers from 0 to 10, print only if divisible by 2 (i % 2 == 0 checks this). All even values in range are displayed.
 
----
+Theory:
+Conditional statements within loops allow targeted outputs, while modulus operator helps recognize even/odd numbers.
 
-## 4. Code Name: Print Even Numbers from 0 to 10 Using For Loop
+Concepts:
 
-**Logic**:
-A loop from 0 to 10 prints numbers only if they satisfy the even condition using modulus operator `i % 2 == 0`.
+Using conditions in loops
 
-**Theory**:
-The modulo operation is used to find divisibility. Conditional logic inside loops enables filtering desired values.
+Modulo operator
 
-**Concepts Covered**:
+Selective printing
 
-* Conditional checks inside loop
-* Modulus operation
-* Filtering output
+Sample Output:
 
-**Output**:
-
-```
+text
 0
 2
 4
 6
 8
 10
-```
+5. Code: Reverse a Five-Digit Number
+Logic:
+Take a number, then reverse its digits: repeatedly get the last digit (% 10), build the new number (* 10 + digit), then chop off the digit (/ 10).
 
----
+Theory:
+Combining modulo and integer division allows programmers to break down and reconstruct numbers in algorithmic ways.
 
-## 5. Code Name: Reverse a 5-Digit Number
+Concepts:
 
-**Logic**:
-A number is reversed by extracting its digits one by one using `% 10`, building the reverse using multiplication and addition, and reducing the original number using `/ 10`.
+Integer digit handling
 
-**Theory**:
-Arithmetic operations like modulo and integer division allow precise control over digit manipulation. This logic is foundational for number-based algorithms.
+Reverse logic
 
-**Concepts Covered**:
+Arithmetic manipulations
 
-* Modulo and integer division
-* Reversing digits
-* Arithmetic manipulation
+Sample Output:
 
-**Output**:
-
-```
+text
 Reversed number: 56032
-```
+6. Code: Secure Login with Limited Attempts
+Logic:
+Grants a user up to three tries to enter the correct password. Each failed attempt reduces the count. If correct, it grants access; if not, access is denied after three tries.
 
----
+Theory:
+Looping structures paired with conditionals form the basis for basic login and authentication systems.
 
-## 6. Code Name: Limited Attempts for System Lock and Unlock
+Concepts:
 
-**Logic**:
-The user gets three attempts to input the correct password. Each failed attempt reduces the counter. On correct input, access is granted and loop breaks; otherwise, access is denied.
+While loops
 
-**Theory**:
-Combining loops with conditionals allows implementing basic user authentication. This simulates security systems.
+Access control
 
-**Concepts Covered**:
+Conditional break
 
-* While loop
-* Authentication logic
-* Loop termination
+Sample Output:
 
-**Output**:
-
-```
+text
 Welcome to Secure Login
 
 Enter the password (Attempts left:3): 345
@@ -159,132 +142,117 @@ Incorrect password, Pls try again
 
 Enter the password (Attempts left:1): 123
 Access Granted, Welcome!
-```
+7. Code: Left-Aligned Incremental Star Triangle
+Logic:
+The outer loop runs for each row. For each row, the inner loop prints stars equal to the row number (growing with each line).
 
----
+Theory:
+This pattern demonstrates how nested iteration builds up growing shapes, like a left-sided triangle.
 
-## 7. Code Name: Increment Star Pattern (Left)
+Concepts:
 
-**Logic**:
-Outer loop controls rows. Inner loop prints `*` as many times as the current row number. Number of stars increases with each row.
+Nested looping
 
-**Theory**:
-Nested loops generate structured patterns. This example is a basic incremental left-aligned triangle.
+Pattern formation
 
-**Concepts Covered**:
+Line-by-line output variation
 
-* Nested loops
-* Pattern building
-* Output formatting
+Sample Output:
 
-**Output**:
-
-```
+text
 *
 **
 ***
 ****
 *****
-```
+8. Code: Right-Aligned Star Pattern (Mirror)
+Logic:
+For each row, two inner loops: one prints initial spaces for right-alignment, the next outputs the stars, building a right-angled triangle mirrored horizontally.
 
----
+Theory:
+Careful management of indices and spacing allows for the creation of aligned pattern outputs.
 
-## 8. Code Name: Mirror Image Star Pattern
+Concepts:
 
-**Logic**:
-The outer loop handles rows. The first inner loop prints spaces to shift stars right. The second inner loop prints `*` incrementally.
+Indentation techniques
 
-**Theory**:
-Right-aligned patterns combine both spacing and symbol control. They reinforce index manipulation.
+Nested for loops
 
-**Concepts Covered**:
+Formatting with spaces
 
-* Alignment logic
-* Nested for loops
-* Visual formatting
+Sample Output:
 
-**Output**:
-
-```
+text
     *
    **
   ***
  ****
 *****
-```
+9. Code: Floyd’s Triangle (User Input Rows)
+Logic:
+Takes a user-defined row count and builds Floyd’s triangle, filling rows with numbers incrementing sequentially.
 
----
+Theory:
+Patterns like Floyd’s triangle are built with controlled increments in nested structures and reinforce handling user inputs.
 
-## 9. Code Name: Floyd’s Series (User Input)
+Concepts:
 
-**Logic**:
-The program accepts row input and fills values in Floyd's triangle format, increasing the number of elements per row.
+User-driven logic
 
-**Theory**:
-Floyd’s triangle is a sequential number triangle. It helps reinforce nested loops and controlled increments.
+Growing nested loops
 
-**Concepts Covered**:
+Patterned numeric output
 
-* Nested loop growth
-* Mathematical patterns
-* User interaction
+Sample Output:
 
-**Output**:
-
-```
+text
 Enter number of rows: 4
 1
 2 3
 4 5 6
 7 8 9 10
-```
+10. Code: Hourglass Pattern with Stars
+Logic:
+Splits the output into two symmetrical halves. Uses loops to control both spacing and star count, producing a visual hourglass shape.
 
----
+Theory:
+Pattern symmetry requires handling both increasing and decreasing elements and spaces for reflection.
 
-## 10. Code Name: Hourglass Star Pattern
+Concepts:
 
-**Logic**:
-Divides the hourglass into two triangle parts: inverted and upright. Uses spacing and decreasing/increasing stars to create symmetry.
+Symmetrical looping
 
-**Theory**:
-Symmetrical patterns teach loop manipulation in both ascending and descending order.
+Visual design logic
 
-**Concepts Covered**:
+Nested construction
 
-* Loop symmetry
-* Pattern reflection
-* Precise spacing
+Sample Output:
 
-**Output**:
-
-```
+text
 Enter the number of rows for the upper half: 3
 *****
  ***
   *
  ***
 *****
-```
+11. Code: Outer vs Inner Loop Demonstration
+Logic:
+An outer loop prints its index each time, and for every outer loop step, the inner loop iterates through its full range, displaying its value.
 
----
+Theory:
+This illustrates classic nested loop control, where outer events trigger full sequences of inner ones.
 
-## 11. Code Name: Inner and Outer Loops
+Concepts:
 
-**Logic**:
-Two levels of iteration are used. The outer loop prints its index, and for each iteration, the inner loop runs completely.
+Loop nesting
 
-**Theory**:
-Demonstrates nested loops and control flow where each outer iteration triggers multiple inner iterations.
+Hierarchical output
 
-**Concepts Covered**:
+Sequence relationships
 
-* Loop hierarchy
-* Sequence generation
-* Nested behavior
+Sample Output:
 
-**Output**:
-
-```
+text
 Outer:1
 Inner:1
 Inner:2
@@ -293,4 +261,3 @@ Outer:2
 Inner:1
 Inner:2
 Inner:3
-```
